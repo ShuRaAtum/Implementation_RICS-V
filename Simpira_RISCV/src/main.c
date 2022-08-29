@@ -24,12 +24,12 @@ int main(void)
 
     simpira_keyschedule(rk);
 
-
+    //cycle Measurement
     uint64_t oldcount = getcycles();
     for(int i=0; i<10000; i++) simpira_permutation(rk, in, out);
     uint64_t cyclecount = getcycles()-oldcount;
 
-    printf("cyc: %d\n", (unsigned int)cyclecount);
+    printf("cyc: %d\n", (unsigned int)cyclecount/10000);
     
 //    simpira_permutation(rk, in, out);
 //    // Print ciphertext
